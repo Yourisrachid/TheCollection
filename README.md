@@ -13,8 +13,8 @@ It is a website of a collection of 10 movies (which is also responsive and made 
 ## Link ##
 
 
-[Click here for my Gitpage](https://yourisrachid.github.io/MyCollection/)
+[Click here for my Gitpage](https://yourisrachid.github.io/TheCollection/)
 
-Or here : https://yourisrachid.github.io/MyCollection/
+Or here : https://yourisrachid.github.io/TheCollection/
 
 Thank you.
