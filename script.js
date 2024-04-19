@@ -143,6 +143,16 @@ let film = [
 ]
 
 
+let header = document.createElement('header');
+document.body.appendChild(header);
+
+let h1 = document.createElement('h1');
+header.appendChild(h1);
+h1.textContent = 'Active movie collection';
+h1.style.color = 'white';
+h1.style.textAlign = 'center';
+
+
 let article = document.createElement('article');
 document.body.appendChild(article);
 
@@ -156,6 +166,14 @@ function createCard (array) {
         let div = document.createElement('div');
         div.className = 'card';
         article.appendChild(div);
+
+        let content = document.createElement('div');
+        content.className = 'content';
+        div.appendChild(content);
+
+        let back = document.createElement('div');
+        back.className = 'back';
+        div.appendChild(back);
 
 
         let titleElement = document.createElement('h2');
@@ -181,21 +199,19 @@ function createCard (array) {
         genreElement.textContent = film[i].genre;
         genreElement.style.color = 'white';
 
+        back.style.backgroundImage = `url(${film[i].picture})`;
+        back.style.backgroundSize = `100% 100%`;
+        back.style.backgroundRepeat = 'no-repeat';
+        back.style.backgroundPositionX = `center`;
 
-        let pictureElement = document.createElement('img');
-        pictureElement.src = film[i].picture;
-        pictureElement.style.width = '100%';
-
-   
+        article.style.gridTemplateRows = `repeat(${array.length}, 200%);`
 
     
-        div.appendChild(titleElement);
-        div.appendChild(directorElement);
-        div.appendChild(yearElement);
-        div.appendChild(castElement);
-        div.appendChild(genreElement);
-        div.appendChild(pictureElement);
-        
+        content.appendChild(titleElement);
+        content.appendChild(directorElement);
+        content.appendChild(yearElement);
+        content.appendChild(castElement);
+        content.appendChild(genreElement);        
     }
 
 }
