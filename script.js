@@ -203,9 +203,6 @@ function createCard (array) {
         back.style.backgroundSize = `100% 100%`;
         back.style.backgroundRepeat = 'no-repeat';
         back.style.backgroundPositionX = `center`;
-
-        article.style.gridTemplateRows = `repeat(${array.length}, 200%);`
-
     
         content.appendChild(titleElement);
         content.appendChild(directorElement);
@@ -220,3 +217,6 @@ function createCard (array) {
 createCard(film);
 
 
+// Add clickable IMDB link to each film
+// Style
+// Fix Text version desktop
